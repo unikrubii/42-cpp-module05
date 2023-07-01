@@ -29,7 +29,7 @@ class Bureaucrat
 	public:
 		Bureaucrat( void );
 		Bureaucrat( int grade );
-		Bureaucrat( std::string, int grade );
+		Bureaucrat( const std::string, int grade );
 		~Bureaucrat( void ) {};
 
 		// operator overload
