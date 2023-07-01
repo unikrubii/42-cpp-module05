@@ -5,6 +5,9 @@
 # include <string>
 # include <exception>
 # include <cstdlib>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -23,11 +26,12 @@ class Bureaucrat
 		};
 
 	protected:
-		const std::string	_name;
-		int					_grade;
+		std::string	_name;
+		int			_grade;
 
 	public:
 		Bureaucrat( void );
+		Bureaucrat( const Beruaucrat &src );
 		Bureaucrat( int grade );
 		Bureaucrat( const std::string, int grade );
 		~Bureaucrat( void ) {};
@@ -42,8 +46,10 @@ class Bureaucrat
 		// setters
 		void		setGrade( int grade );
 
+		// Member Functions
 		void		incrementGrade( void );
 		void		decrementGrade( void );
+		void		signForm( Form &form );
 };
 
 // ostream overload

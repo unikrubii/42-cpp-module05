@@ -1,17 +1,24 @@
 #include "Bureaucrat.hpp"
 
 // Constructor
-Bureaucrat::Bureaucrat( void ): _name("DEFAULT") {
+Bureaucrat::Bureaucrat( void ) {
+	this->_name = "DEFAULT";
 	this->setGrade( rand() % 150 );
 	std::cout << "Default Bureaucrat is create with random grade: " << this->_grade << std::endl;
 }
 
-Bureaucrat::Bureaucrat( int grade ): _name("DEFAULT") {
+Bureaucrat::Bureaucrat( const Bureaucrat &src ) {
+	*this = src;
+}
+
+Bureaucrat::Bureaucrat( int grade ) {
+	this->_name = "DEFAULT";
 	this->setGrade( grade );
 	std::cout << "Default Bureaucrat is create with grade: " << this->_grade << std::endl;
 }
 
-Bureaucrat::Bureaucrat( std::string name, int grade ): _name("DEFAULT") {
+Bureaucrat::Bureaucrat( std::string name, int grade ) {
+	this->_name = name;
 	this->setGrade( grade );
 	std::cout << "Bureaucrat is create with grade: " << this->_grade << std::endl;
 }
@@ -26,12 +33,12 @@ const char *Bureaucrat::GradeTooLowException::what( void ) const throw() {
 }
 
 // Operator overload
-Bureaucrat &Bureaucrat::operator=( const Bureaucrat &rhs) {
+Bureaucrat &Bureaucrat::operator=( const Bureaucrat &rhs ) {
 	if ( this == &rhs ) {
 		return *this;
 	}
-	
-	this->setGrade( rhs._grade );
+
+	this->_grade = rhs.getGrade();
 	return *this;
 }
 
@@ -61,6 +68,10 @@ void Bureaucrat::incrementGrade( void ) {
 
 void Bureaucrat::decrementGrade( void ) {
 	this->setGrade( this->_grade + 1);
+}
+
+void Bureaucrat::signForm( Form &form ) {
+	form.beSigned( *this );
 }
 
 // Ostream overload
