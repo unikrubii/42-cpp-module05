@@ -3,21 +3,24 @@
 
 # include "Bureaucrat.hpp"
 
-class Beruaucrat;
+class Bureaucrat;
 
 class Form
 {
 	private:
-		const std::string	_name;
-		bool				_isSign;
-		const int			_signedGrade;
-		const int			_execGrade;
+		std::string	_name;
+		bool		_isSign;
+		int			_signedGrade;
+		int			_execGrade;
+
+		// Member Functions
+		void	checkGrade( int signedGrade, int execGrade );
 
 	public:
 		// Constructor
 		Form( void );
 		Form( const Form &src );
-		Form( std::string name, int signedGrade, int execGrade );
+		Form( const std::string &name, int signedGrade, int execGrade );
 
 		// assigned operator overload
 		Form	&operator=( const Form &rhs );
@@ -26,13 +29,13 @@ class Form
 		~Form( void ) {};
 
 		// Getters
-		bool	getSignedStatus();
-		const int		getSignedGrade();
-		const int		getExecGrade();
+		bool				getSignedStatus() const;
+		int					getSignedGrade() const;
+		int					getExecGrade() const;
+		const std::string	&getName() const;
 
 		// Member Functions
-		void	beSigned( Bureaucrat &b );
-		void	checkGrade( const int signedGrade, const int execGrade );
+		void	beSigned( const Bureaucrat &b );
 
 		// exceptions
 		class GradeTooHighException: public std::exception

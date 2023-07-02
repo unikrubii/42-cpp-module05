@@ -31,7 +31,7 @@ class Bureaucrat
 
 	public:
 		Bureaucrat( void );
-		Bureaucrat( const Beruaucrat &src );
+		Bureaucrat( const Bureaucrat &src );
 		Bureaucrat( int grade );
 		Bureaucrat( const std::string, int grade );
 		~Bureaucrat( void ) {};
@@ -40,8 +40,8 @@ class Bureaucrat
 		Bureaucrat	&operator=( const Bureaucrat &rhs );
 
 		// getters
-		std::string	getName( void );
-		int			getGrade( void );
+		const std::string	&getName( void ) const;
+		int					getGrade( void ) const;
 
 		// setters
 		void		setGrade( int grade );

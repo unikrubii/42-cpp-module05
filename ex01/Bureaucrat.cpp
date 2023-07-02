@@ -9,6 +9,7 @@ Bureaucrat::Bureaucrat( void ) {
 
 Bureaucrat::Bureaucrat( const Bureaucrat &src ) {
 	*this = src;
+	std::cout << "Bureaucrat name: " << this->getName() << " is create with random grade: " << this->_grade << std::endl;
 }
 
 Bureaucrat::Bureaucrat( int grade ) {
@@ -20,7 +21,7 @@ Bureaucrat::Bureaucrat( int grade ) {
 Bureaucrat::Bureaucrat( std::string name, int grade ) {
 	this->_name = name;
 	this->setGrade( grade );
-	std::cout << "Bureaucrat is create with grade: " << this->_grade << std::endl;
+	std::cout << "Bureaucrat name: \'" << this->getName() << "\' is create with random grade: " << this->_grade << std::endl;
 }
 
 // Exceptions
@@ -43,11 +44,11 @@ Bureaucrat &Bureaucrat::operator=( const Bureaucrat &rhs ) {
 }
 
 // Getters
-int Bureaucrat::getGrade( void ) {
+int Bureaucrat::getGrade( void ) const {
 	return _grade;
 }
 
-std::string Bureaucrat::getName( void ) {
+const std::string &Bureaucrat::getName( void ) const {
 	return _name;
 }
 
