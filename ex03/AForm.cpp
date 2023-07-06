@@ -87,6 +87,10 @@ const char *AForm::FileOpenedException::what( void ) const throw() {
 	return "File open error!!";
 }
 
+const char	*AForm::FormNotFoundException::what( void ) const throw() {
+	return "Form not found";
+}
+
 // ostream overload
 std::ostream &operator<<( std::ostream &out, const AForm &f ) {
 	out << "Form:        " << f.getName() << std::endl;

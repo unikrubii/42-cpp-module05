@@ -63,6 +63,12 @@ class AForm
 			public:
 				virtual const char *what() const throw();
 		};
+
+		class FormNotFoundException: public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
 };
 
 // ostream overload

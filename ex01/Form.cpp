@@ -80,9 +80,9 @@ const char *Form::GradeTooLowException::what( void ) const throw() {
 }
 
 // ostream overload
-std::ostream &operator<<( std::ostream &out, const Form &rhs ) {
-	out << "Form name: \'" << rhs.getName() << "\' isSigned: " << rhs.getSignedStatus();
-	out << " signedGrade: " << std::to_string( rhs.getSignedGrade() );
-	out << " execGrade: " << std::to_string( rhs.getExecGrade() );
+std::ostream &operator<<( std::ostream &out, const Form &f ) {
+	out << "Form name: \'" << f.getName() << "\' isSigned: " << f.getSignedStatus();
+	out << " signedGrade: " << std::to_string( f.getSignedGrade() );
+	out << " execGrade: " << std::to_string( f.getExecGrade() );
 	return out;
 }

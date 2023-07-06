@@ -53,6 +53,6 @@ class Form
 };
 
 // ostream overload
-std::ostream	&operator<<( std::ostream &o, Form *f );
+std::ostream	&operator<<( std::ostream &o, Form &f );
 
 #endif
