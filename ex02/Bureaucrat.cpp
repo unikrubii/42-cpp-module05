@@ -71,8 +71,12 @@ void Bureaucrat::decrementGrade( void ) {
 	this->setGrade( this->_grade + 1);
 }
 
-void Bureaucrat::signForm( Form &form ) {
+void Bureaucrat::signForm( AForm &form ) const {
 	form.beSigned( *this );
+}
+
+void Bureaucrat::executeForm( AForm const & form ) {
+	form.execute( *this );
 }
 
 // Ostream overload

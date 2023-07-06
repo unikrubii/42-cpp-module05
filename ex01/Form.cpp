@@ -45,9 +45,15 @@ const std::string &Form::getName( void ) const {
 
 // Methods
 void Form::beSigned( const Bureaucrat &b ) {
-	if ( b.getGrade() > this->_execGrade || b.getGrade() > this->_signedGrade ) {
+	// validate grade
+	if ( b.getGrade() > this->_signedGrade ) {
 		throw( Bureaucrat::GradeTooLowException() );
 	}
+	if ( b.getGrade() < 1 ) {
+		throw( Bureaucrat::GradeTooHighException() );
+	}
+
+	// validate form
 	if ( this->getSignedStatus() == false ) {
 		this->_isSign = true;
 		std::cout << "Form \"" << this->_name << "\" is signed by " << b.getName() << std::endl;
@@ -74,4 +80,9 @@ const char *Form::GradeTooLowException::what( void ) const throw() {
 }
 
 // ostream overload
-
+std::ostream &operator<<( std::ostream &out, const Form &rhs ) {
+	out << "Form name: \'" << rhs.getName() << "\' isSigned: " << rhs.getSignedStatus();
+	out << " signedGrade: " << std::to_string( rhs.getSignedGrade() );
+	out << " execGrade: " << std::to_string( rhs.getExecGrade() );
+	return out;
+}
