@@ -11,7 +11,7 @@ Bureaucrat::Bureaucrat( int grade ): _name("DEFAULT") {
 	std::cout << "Default Bureaucrat is create with grade: " << this->_grade << std::endl;
 }
 
-Bureaucrat::Bureaucrat( std::string name, int grade ): _name("DEFAULT") {
+Bureaucrat::Bureaucrat( std::string name, int grade ): _name(name) {
 	this->setGrade( grade );
 	std::cout << "Bureaucrat is create with grade: " << this->_grade << std::endl;
 }
@@ -65,6 +65,6 @@ void Bureaucrat::decrementGrade( void ) {
 
 // Ostream overload
 std::ostream &operator<<( std::ostream &o, Bureaucrat *b ) {
-	o << b->getName() << ", Bureaucat grade " << b->getGrade() << std::endl;
+	o << "Bureaucrat: " << b->getName() << ", Bureaucat grade " << b->getGrade() << std::endl;
 	return o;
 }
