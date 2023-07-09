@@ -11,7 +11,7 @@ class RobotomyRequestForm: public AForm {
 		RobotomyRequestForm( const std::string &target );
 
 		// Destructor
-		~RobotomyRequestForm( void ) {};
+		~RobotomyRequestForm( void );
 
 		// assigned operator overload
 		RobotomyRequestForm	&operator=( const RobotomyRequestForm &rhs );

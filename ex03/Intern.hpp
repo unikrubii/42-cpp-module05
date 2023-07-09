@@ -20,7 +20,7 @@ class intern
 		intern( const intern &src );
 
 		// Destructor
-		~intern( void ) {};
+		~intern( void );
 
 		// assigned operator overload
 		intern	&operator=( const intern &rhs );

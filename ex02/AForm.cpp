@@ -16,6 +16,10 @@ AForm::AForm( const std::string &name, int signedGrade, int execGrade ): _name( 
 	std::cout << "AForm name: \'" << this->getName() << "\' signedGrade: " << std::to_string( this->getSignedGrade() ) << " execGrade: " << std::to_string( this->getExecGrade() ) << std::endl;
 }
 
+// Destructor
+AForm::~AForm( void ) {
+}
+
 // assigned operator overload
 AForm	&AForm::operator=( const AForm &rhs ) {
 	if ( this == &rhs ) {

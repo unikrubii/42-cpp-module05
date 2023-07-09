@@ -11,7 +11,7 @@ class PresidentialPardonForm: public AForm {
 		PresidentialPardonForm( const std::string &target );
 
 		// Destructor
-		~PresidentialPardonForm( void ) {};
+		~PresidentialPardonForm( void );
 
 		// assigned operator overload
 		PresidentialPardonForm	&operator=( const PresidentialPardonForm &rhs );

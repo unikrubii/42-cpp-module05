@@ -13,6 +13,10 @@ ShrubberyCreationForm::ShrubberyCreationForm( const std::string &target ): AForm
 	// std::cout << "ShrubberyCreationForm name: \'" << this->getName() << "\' signedGrade: " << std::to_string( this->getSignedGrade() ) << " execGrade: " << std::to_string( this->getExecGrade() ) << std::endl;
 }
 
+// Destructor
+ShrubberyCreationForm::~ShrubberyCreationForm( void ) {
+}
+
 // assigned operator overload
 ShrubberyCreationForm	&ShrubberyCreationForm::operator=( const ShrubberyCreationForm &rhs ) {
 	if ( this == &rhs ) {

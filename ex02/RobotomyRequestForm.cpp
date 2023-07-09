@@ -13,6 +13,10 @@ RobotomyRequestForm::RobotomyRequestForm( const std::string &target ): AForm("Ro
 	// std::cout << "RobotomyRequestForm name: \'" << this->getName() << "\' signedGrade: " << std::to_string( this->getSignedGrade() ) << " execGrade: " << std::to_string( this->getExecGrade() ) << std::endl;
 }
 
+// Destructor
+RobotomyRequestForm::~RobotomyRequestForm( void ) {
+}
+
 // assigned operator overload
 RobotomyRequestForm	&RobotomyRequestForm::operator=( const RobotomyRequestForm &rhs ) {
 	if ( this == &rhs ) {

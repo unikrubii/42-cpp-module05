@@ -13,6 +13,10 @@ PresidentialPardonForm::PresidentialPardonForm( const std::string &target ): AFo
 	// std::cout << "PresidentialPardonForm name: \'" << this->getName() << "\' signedGrade: " << std::to_string( this->getSignedGrade() ) << " execGrade: " << std::to_string( this->getExecGrade() ) << std::endl;
 }
 
+// Destructor
+PresidentialPardonForm::~PresidentialPardonForm( void ) {
+}
+
 // assigned operator overload
 PresidentialPardonForm	&PresidentialPardonForm::operator=( const PresidentialPardonForm &rhs ) {
 	if ( this == &rhs ) {

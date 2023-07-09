@@ -16,6 +16,10 @@ Bureaucrat::Bureaucrat( std::string name, int grade ): _name(name) {
 	std::cout << "Bureaucrat is create with grade: " << this->_grade << std::endl;
 }
 
+// Destructor
+Bureaucrat::~Bureaucrat( void ) {
+}
+
 // Exceptions
 const char *Bureaucrat::GradeTooHighException::what( void ) const throw() {
 	return "Grade Too High!";

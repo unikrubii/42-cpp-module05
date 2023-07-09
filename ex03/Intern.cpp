@@ -7,6 +7,10 @@ intern::intern( const intern &src ) {
 	*this = src;
 }
 
+// Destructor
+intern::~intern( void ) {
+}
+
 // assigned operator overload
 intern	&intern::operator=( const intern &rhs ) {
 	if (this != &rhs)

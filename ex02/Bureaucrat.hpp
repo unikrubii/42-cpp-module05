@@ -35,7 +35,7 @@ class Bureaucrat
 		Bureaucrat( const Bureaucrat &src );
 		Bureaucrat( int grade );
 		Bureaucrat( const std::string, int grade );
-		~Bureaucrat( void ) {};
+		~Bureaucrat( void );
 
 		// operator overload
 		Bureaucrat	&operator=( const Bureaucrat &rhs );

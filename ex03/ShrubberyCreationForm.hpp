@@ -11,7 +11,7 @@ class ShrubberyCreationForm: public AForm {
 		ShrubberyCreationForm( const std::string &target );
 
 		// Destructor
-		~ShrubberyCreationForm( void ) {};
+		~ShrubberyCreationForm( void );
 
 		// assigned operator overload
 		ShrubberyCreationForm	&operator=( const ShrubberyCreationForm &rhs );

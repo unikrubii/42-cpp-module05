@@ -27,7 +27,7 @@ class AForm
 		AForm	&operator=( const AForm &rhs );
 
 		// Destructor
-		virtual ~AForm( void ) {};
+		virtual ~AForm( void );
 
 		// Getters
 		bool			isSigned() const;

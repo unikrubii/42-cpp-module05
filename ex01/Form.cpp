@@ -16,6 +16,10 @@ Form::Form( const std::string &name, int signedGrade, int execGrade ): _name( na
 	std::cout << "Form name: \'" << this->getName() << "\' signedGrade: " << std::to_string( this->getSignedGrade() ) << " execGrade: " << std::to_string( this->getExecGrade() ) << std::endl;
 }
 
+// Destructor
+Form::~Form( void ) {
+}
+
 // assigned operator overload
 Form	&Form::operator=( const Form &rhs ) {
 	if ( this == &rhs ) {

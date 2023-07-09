@@ -26,7 +26,7 @@ class Form
 		Form	&operator=( const Form &rhs );
 
 		// Destructor
-		~Form( void ) {};
+		~Form( void );
 
 		// Getters
 		bool				isSigned() const;
