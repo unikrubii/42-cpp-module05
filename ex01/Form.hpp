@@ -29,7 +29,7 @@ class Form
 		~Form( void ) {};
 
 		// Getters
-		bool				getSignedStatus() const;
+		bool				isSigned() const;
 		int					getSignedGrade() const;
 		int					getExecGrade() const;
 		const std::string	&getName() const;

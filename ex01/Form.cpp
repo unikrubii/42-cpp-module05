@@ -27,7 +27,7 @@ Form	&Form::operator=( const Form &rhs ) {
 }
 
 // Getters
-bool Form::getSignedStatus( void ) const {
+bool Form::isSigned( void ) const {
 	return this->_isSign;
 }
 
@@ -54,11 +54,11 @@ void Form::beSigned( const Bureaucrat &b ) {
 	}
 
 	// validate form
-	if ( this->getSignedStatus() == false ) {
+	if ( this->isSigned() == false ) {
 		this->_isSign = true;
-		std::cout << "Form \"" << this->_name << "\" is signed by " << b.getName() << std::endl;
+		std::cout << "Bureaucrat: \"" << b.getName() << " signed Form: " << this->_name << std::endl;
 	} else {
-		std::cout << "Form \"" << this->_name << "\" is already signed" << std::endl;
+		std::cout << "Bureaucrat: \"" << b.getName() << " couldn't signed Form: " << this->_name << " because: Form is already signed" << std::endl;
 	}
 }
 
@@ -81,7 +81,7 @@ const char *Form::GradeTooLowException::what( void ) const throw() {
 
 // ostream overload
 std::ostream &operator<<( std::ostream &out, const Form &f ) {
-	out << "Form name: \'" << f.getName() << "\' isSigned: " << f.getSignedStatus();
+	out << "Form name: \'" << f.getName() << "\' isSigned: " << f.isSigned();
 	out << " signedGrade: " << std::to_string( f.getSignedGrade() );
 	out << " execGrade: " << std::to_string( f.getExecGrade() );
 	return out;

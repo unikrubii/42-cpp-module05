@@ -56,9 +56,9 @@ void AForm::beSigned( const Bureaucrat &b ) {
 	// validate form
 	if ( this->isSigned() == false ) {
 		this->_isSign = true;
-		std::cout << "AForm: \"" << this->_name << "\" is signed by " << b.getName() << std::endl;
+		std::cout << "Bureaucrat: \"" << b.getName() << " signed Form: " << this->_name << std::endl;
 	} else {
-		std::cout << "AForm: \"" << this->_name << "\" is already signed" << std::endl;
+		std::cout << "Bureaucrat: \"" << b.getName() << " couldn't signed Form: " << this->_name << " because: Form is already signed" << std::endl;
 	}
 }
 
