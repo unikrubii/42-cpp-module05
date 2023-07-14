@@ -20,6 +20,7 @@ int main (void) {
 		catch ( std::exception &e ) {
 			std::cout << e.what() << std::endl;
 		}
+		delete form;
 	}
 	std::cout << std::endl << "------------------------------------------" << std::endl << std::endl;
 	{
@@ -37,10 +38,11 @@ int main (void) {
 		catch ( std::exception &e ) {
 			std::cout << e.what() << std::endl;
 		}
+		delete form;
 	}
 	std::cout << std::endl << "------------------------------------------" << std::endl << std::endl;
 	{
-		Bureaucrat b( "B1", 20 );
+		Bureaucrat b( "B1", 1 );
 		AForm *form;
 		intern intern;
 		try {
@@ -54,10 +56,11 @@ int main (void) {
 		catch ( std::exception &e ) {
 			std::cout << e.what() << std::endl;
 		}
+		delete form;
 	}
 	std::cout << std::endl << "------------------------------------------" << std::endl << std::endl;
 	{
-		Bureaucrat b( "B1", 20 );
+		Bureaucrat b( "B1", 1 );
 		AForm *form;
 		intern intern;
 		try {

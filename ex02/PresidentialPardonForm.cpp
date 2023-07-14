@@ -1,7 +1,7 @@
 #include "PresidentialPardonForm.hpp"
 
 // Constructor
-PresidentialPardonForm::PresidentialPardonForm( void ): AForm("PresidentialPardonForm_Default", 72, 45), _target("None") {
+PresidentialPardonForm::PresidentialPardonForm( void ): AForm("PresidentialPardonForm_Default", 25, 5), _target("None") {
 	// std::cout << "PresidentialPardonForm name: \'" << this->getName() << "\' signedGrade: " << std::to_string( this->getSignedGrade() ) << " execGrade: " << std::to_string( this->getExecGrade() ) << std::endl;
 }
 
@@ -9,7 +9,7 @@ PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm &sr
 	// std::cout << "PresidentialPardonForm name: \'" << this->getName() << "\' signedGrade: " << std::to_string( this->getSignedGrade() ) << " execGrade: " << std::to_string( this->getExecGrade() ) << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm( const std::string &target ): AForm("PresidentialPardonForm", 72, 45), _target(target) {
+PresidentialPardonForm::PresidentialPardonForm( const std::string &target ): AForm("PresidentialPardonForm", 25, 5), _target(target) {
 	// std::cout << "PresidentialPardonForm name: \'" << this->getName() << "\' signedGrade: " << std::to_string( this->getSignedGrade() ) << " execGrade: " << std::to_string( this->getExecGrade() ) << std::endl;
 }
 
